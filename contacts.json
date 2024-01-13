@@ -7,13 +7,6 @@
     "email": "carson@example.comz"
   },
   {
-    "id": 3,
-    "first": "",
-    "last": "",
-    "phone": "",
-    "email": "joe@example2.com"
-  },
-  {
     "id": 5,
     "first": "Joe",
     "last": "Blow",
@@ -43,10 +36,10 @@
   },
   {
     "id": 13,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe8@example.com"
+    "first": "Elliot",
+    "last": "Lake",
+    "phone": "07908902629",
+    "email": "elliotlake@protonmail.com"
   },
   {
     "id": 15,

@@ -4,12 +4,15 @@
             <fieldset>
                 <legend>Contact Values</legend>
                 <p>
-                    <label for="email">Email</label>
+                    <label for="email">Email</label> <!-- This should send a validation request to the server, but I don't know go so I won't bother today-->
                     <input name="email"
                            id="email"
-                           type="email"
+                           type="email" 
                            placeholder="Email"
-                           value="{{ .Contact.Email }}">
+                           value="{{ .Contact.Email }}"
+                           hx-get="/contacts/{{.Contact.Id}}/email"
+                           hx-target="next .error"
+                           hx-swap="innerHtml">
                     <span class="error">{{ .Errors.Email }}</span>
                 </p>
                 <p>
@@ -42,7 +45,9 @@
                 <button>Save</button>
             </fieldset>
         </form>
-            <button hx-delete="/contacts/{{ .Contact.Id }}" hx-target="body">Delete Contact</button>
+            <!-- push-url changes url to reflect HTTP response, delete sends a delete request, target replaces the internals of the body -->
+            <!-- confirm offers a pop up to make sure they want to delete -->
+            <button hx-confirm="Are you sure?" hx-delete="/contacts/{{ .Contact.Id }}" hx-target="body" hx-push-url="true">Delete Contact</button>
         <p>
             <a href="/contacts">Back</a>
         </p>
