@@ -22,6 +22,9 @@
                 </td>
             </tr>
         {{ end }}
+            <a hx-get="/contacts" hx-target="next div" hx-swap="afterBegin">Load More</a>
+            <div id="otherPage">
+            </div>
         </tbody>
     </table>
 {{ end }}

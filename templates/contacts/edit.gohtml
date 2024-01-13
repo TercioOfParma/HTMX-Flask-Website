@@ -12,7 +12,9 @@
                            value="{{ .Contact.Email }}"
                            hx-get="/contacts/{{.Contact.Id}}/email"
                            hx-target="next .error"
-                           hx-swap="innerHtml">
+                           hx-swap="innerHtml"
+                           hx-trigger="change, keyup delay:200ms changed"> <!-- Checks after key up every 200 miliseconds when focused on the element, 
+                           from:body for the rest of the body to be checked, and changed only does this when the content is changed -->
                     <span class="error">{{ .Errors.Email }}</span>
                 </p>
                 <p>

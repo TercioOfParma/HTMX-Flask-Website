@@ -64,23 +64,9 @@
   },
   {
     "id": 18,
-    "first": "",
-    "last": "",
-    "phone": "",
-    "email": "restexample1@example.com"
-  },
-  {
-    "id": 19,
-    "first": "",
-    "last": "",
-    "phone": "",
-    "email": "restexample2@example.com"
-  },
-  {
-    "id": 20,
     "first": "Elliot",
     "last": "Lake",
-    "phone": "12346",
+    "phone": "07908902629",
     "email": "ElliotLake@protonmail.com"
   }
 ]

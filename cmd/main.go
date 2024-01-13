@@ -26,7 +26,7 @@ func main() {
 	r.Handle("/help",
 		contacts.HandleSettings(views.NewView("layout", "contacts/help.gohtml")))
 	r.Handle("/contacts",
-		contacts.HandleIndex(cs, views.NewView("layout", "contacts/list.gohtml")))
+		contacts.HandleIndex(cs, views.NewView("layout", "contacts/list.gohtml"))).Methods("GET")
 	r.Handle("/contacts/new",
 		contacts.HandleNew(views.NewView("layout", "contacts/new.gohtml"))).Methods("GET")
 	r.Handle("/contacts/new",
