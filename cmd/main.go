@@ -20,7 +20,7 @@ func main() {
 		http.StripPrefix("/static/",
 			http.FileServer(http.Dir(staticDir))))
 	r.Handle("/",
-		contacts.HandleIndex(cs, views.NewView("layout", "contacts/index.gohtml")))
+		contacts.HandleIndex(cs, views.NewView("layout", "contacts/index.gohtml"))).Methods("GET")
 	r.Handle("/settings",
 		contacts.HandleSettings(views.NewView("layout", "contacts/settings.gohtml")))
 	r.Handle("/help",
