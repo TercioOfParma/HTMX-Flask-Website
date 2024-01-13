@@ -21,6 +21,10 @@ func main() {
 			http.FileServer(http.Dir(staticDir))))
 	r.Handle("/",
 		contacts.HandleIndex(cs, views.NewView("layout", "contacts/index.gohtml")))
+	r.Handle("/settings",
+		contacts.HandleSettings(views.NewView("layout", "contacts/settings.gohtml")))
+	r.Handle("/help",
+		contacts.HandleSettings(views.NewView("layout", "contacts/help.gohtml")))
 	r.Handle("/contacts",
 		contacts.HandleIndex(cs, views.NewView("layout", "contacts/list.gohtml")))
 	r.Handle("/contacts/new",

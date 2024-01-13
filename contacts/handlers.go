@@ -2,10 +2,11 @@ package contacts
 
 import (
 	"fmt"
-	"github.com/gorilla/mux"
-	"github.com/mousedownco/htmx-contact-app/views"
 	"net/http"
 	"strconv"
+
+	"github.com/gorilla/mux"
+	"github.com/mousedownco/htmx-contact-app/views"
 )
 
 func HandleIndex(svc *Service, view *views.View) http.HandlerFunc {
@@ -22,6 +23,18 @@ func HandleIndex(svc *Service, view *views.View) http.HandlerFunc {
 			"Query":    q,
 		}
 		view.Render(writer, r, data)
+	}
+}
+func HandleSettings(view *views.View) http.HandlerFunc {
+	return HandlePlainPageFromAjax(view)
+}
+func HandleHelp(view *views.View) http.HandlerFunc {
+	return HandlePlainPageFromAjax(view)
+}
+
+func HandlePlainPageFromAjax(view *views.View) http.HandlerFunc {
+	return func(writer http.ResponseWriter, r *http.Request) {
+		view.Render(writer, r, map[string]interface{}{})
 	}
 }
 
