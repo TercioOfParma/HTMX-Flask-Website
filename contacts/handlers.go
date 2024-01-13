@@ -170,6 +170,6 @@ func HandleDeletePost(svc *Service, view *views.View) http.HandlerFunc {
 			})
 		}
 		views.Flash(w, r, "Deleted Contact!")
-		http.Redirect(w, r, "/contacts", http.StatusFound)
+		http.Redirect(w, r, "/", http.StatusFound)
 	}
 }

@@ -8,7 +8,10 @@
     <div id="main"></div>
     <a href="/contacts/new">Add Contact</a>
     <!-- boost makes the element send an AJAX request rather than HTTP, and replaces the entire body with the response. This is good since the header isn't reloaded -->
-    <a href="/settings" hx-boost="true">Settings</a>
-    <a href="/help" hx-boost="true">Help</a>
-    </p>
+    <!-- This sends out a regular HTTP request if Javascript is disabled -->
+    <div hx-boost="true">
+        <a href="/settings">Settings</a>
+        <a href="/help">Help</a>
+        <a href="/help" hx-boost="false">Help Without AJAX</a>
+    </div>
 {{ end }}

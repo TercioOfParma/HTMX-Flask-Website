@@ -21,13 +21,6 @@
     "email": "joe@example.com"
   },
   {
-    "id": 6,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe1@example.com"
-  },
-  {
     "id": 7,
     "first": "Joe",
     "last": "Blow",
@@ -49,20 +42,6 @@
     "email": "joe4@example.com"
   },
   {
-    "id": 10,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe5@example.com"
-  },
-  {
-    "id": 11,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe6@example.com"
-  },
-  {
     "id": 12,
     "first": "Joe",
     "last": "Blow",
@@ -75,13 +54,6 @@
     "last": "Blow",
     "phone": "123-456-7890",
     "email": "joe8@example.com"
-  },
-  {
-    "id": 14,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe9@example.com"
   },
   {
     "id": 15,
@@ -117,5 +89,12 @@
     "last": "",
     "phone": "",
     "email": "restexample2@example.com"
+  },
+  {
+    "id": 20,
+    "first": "Elliot",
+    "last": "Lake",
+    "phone": "12346",
+    "email": "ElliotLake@protonmail.com"
   }
 ]
