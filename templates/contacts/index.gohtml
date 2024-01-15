@@ -1,10 +1,10 @@
 {{ define "content"}}
     <label for="search">Search Term</label>
-    <input id="search" type="search" name="q" placeholder="{{ .Data.Query }}"/>
+    <input id="search" type="search" name="q" hx-get="/contacts" hx-target="#main" hx-swap="innerHtml"  hx-trigger="search, keyup delay:200ms changed"/>
     <!-- get sends a get request to the url, trigger what event triggers, target the element to change, swap what kind of 
     way the html from the reponse should be handled, include any variables to be included in the request, and push-url to save the request to history-->
-    <button hx-get="/contacts" hx-trigger="click" hx-target="#main" htx-swap="innerHtml" hx-include="#search" hx-push-url="true">Search</button>
-    <button hx-get="/contacts" hx-trigger="click" hx-target="#main" htx-swap="innerHtml" hx-vals="{search:''}">Get All</button> <!-- hx-vals gives default values -->
+    <button hx-get="/contacts" hx-trigger="click" hx-target="#main" hx-swap="innerHtml" hx-include="#search" hx-push-url="true">Search</button>
+    <button hx-get="/contacts" hx-trigger="click" hx-target="#main" hx-swap="innerHtml" hx-vals="{search:''}">Get All</button> <!-- hx-vals gives default values -->
     <div id="main"></div>
     <a href="/contacts/new">Add Contact</a>
     <!-- boost makes the element send an AJAX request rather than HTTP, and replaces the entire body with the response. This is good since the header isn't reloaded -->
