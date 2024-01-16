@@ -163,12 +163,6 @@ func HandleDeletePost(svc *Service, view *views.View) http.HandlerFunc {
 			return
 		}
 		e = svc.Delete(id)
-		if e != nil {
-			view.Render(w, r, map[string]interface{}{
-				"Contact": c,
-				"Errors":  map[string]string{"General": e.Error()},
-			})
-		}
 		views.Flash(w, r, "Deleted Contact!")
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 	}

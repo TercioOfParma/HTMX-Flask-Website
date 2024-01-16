@@ -7,13 +7,6 @@
     "email": "carson@example.comz"
   },
   {
-    "id": 5,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe@example.com"
-  },
-  {
     "id": 7,
     "first": "Joe",
     "last": "Blow",
@@ -21,32 +14,11 @@
     "email": "joe2@example.com"
   },
   {
-    "id": 9,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe4@example.com"
-  },
-  {
-    "id": 12,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe7@example.com"
-  },
-  {
     "id": 13,
     "first": "Elliot",
     "last": "Lake",
     "phone": "07908902629",
     "email": "elliotlake@protonmail.com"
-  },
-  {
-    "id": 15,
-    "first": "Joe",
-    "last": "Blow",
-    "phone": "123-456-7890",
-    "email": "joe10@example.com"
   },
   {
     "id": 16,
